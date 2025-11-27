@@ -17,6 +17,9 @@ return {
           "dockerls",
           "docker_compose_language_service",
           "marksman",
+          "terraformls",
+          "yamlls",
+          "helm_ls",
         },
       })
     end,
@@ -30,6 +33,9 @@ return {
       lspconfig.dockerls.setup({})
       lspconfig.docker_compose_language_service.setup({})
       lspconfig.marksman.setup({})
+      lspconfig.terraformls.setup({})
+      lspconfig.yamlls.setup({})
+      lspconfig.helm_ls.setup({})
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
